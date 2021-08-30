@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/slack-api/static/css/main.c4fb6434.chunk.css",
-    "main.js": "/slack-api/static/js/main.948e6dd5.chunk.js",
-    "main.js.map": "/slack-api/static/js/main.948e6dd5.chunk.js.map",
+    "main.js": "/slack-api/static/js/main.f05c36b1.chunk.js",
+    "main.js.map": "/slack-api/static/js/main.f05c36b1.chunk.js.map",
     "runtime-main.js": "/slack-api/static/js/runtime-main.50270d1c.js",
     "runtime-main.js.map": "/slack-api/static/js/runtime-main.50270d1c.js.map",
-    "static/js/2.e515c37c.chunk.js": "/slack-api/static/js/2.e515c37c.chunk.js",
-    "static/js/2.e515c37c.chunk.js.map": "/slack-api/static/js/2.e515c37c.chunk.js.map",
+    "static/js/2.a0166d84.chunk.js": "/slack-api/static/js/2.a0166d84.chunk.js",
+    "static/js/2.a0166d84.chunk.js.map": "/slack-api/static/js/2.a0166d84.chunk.js.map",
     "index.html": "/slack-api/index.html",
     "static/css/main.c4fb6434.chunk.css.map": "/slack-api/static/css/main.c4fb6434.chunk.css.map",
-    "static/js/2.e515c37c.chunk.js.LICENSE.txt": "/slack-api/static/js/2.e515c37c.chunk.js.LICENSE.txt"
+    "static/js/2.a0166d84.chunk.js.LICENSE.txt": "/slack-api/static/js/2.a0166d84.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.50270d1c.js",
-    "static/js/2.e515c37c.chunk.js",
+    "static/js/2.a0166d84.chunk.js",
     "static/css/main.c4fb6434.chunk.css",
-    "static/js/main.948e6dd5.chunk.js"
+    "static/js/main.f05c36b1.chunk.js"
   ]
 }
