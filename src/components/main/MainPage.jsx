@@ -1,5 +1,6 @@
 
 import React from 'react';
+import {Spinner} from 'react-bootstrap'
 
 
 export default function MainPage(props){
@@ -7,6 +8,7 @@ export default function MainPage(props){
         
 
 <div>
+
     <div className=' h-screen flex'>
         <div className='w-1/2 p-10 bg-gradient-to-r from-yellow-100'>
                  <h1 className="mb-16 text-2xl">SLACK API</h1>
