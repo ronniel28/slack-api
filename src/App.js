@@ -12,12 +12,12 @@
 import React, { useState } from 'react';
 import LogInForm from './components/login/LogInForm';
 import RegistrationForm from './components/registration/RegistrationForm';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import MainPage from './components/main/MainPage';
 import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn]= useState(false);
+  const [isLoggedIn, setIsLoggedIn]= useState(true);
   
 
   function toggleIsLoggedIn(){

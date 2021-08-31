@@ -18,7 +18,7 @@ export default function RegistrationForm(props){
         resolver: yupResolver(schema),
     });
 const submitForm =(data) =>{
-    axios.post("https://206.189.91.54/api/v1/auth/",data)
+    axios.post("http://206.189.91.54/api/v1/auth/",data)
     .then((response)=>{
         console.log(response)
     })

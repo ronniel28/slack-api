@@ -18,10 +18,10 @@ export default function LogInForm(props){
     });
 
 
-const submitForm =async (data) =>{
+const submitForm = (data) =>{
 	
 	
-    axios.post("https://206.189.91.54/api/v1/auth/sign_in",data)
+    axios.post("http://206.189.91.54/api/v1/auth/sign_in",data)
     .then((response)=>{
         console.log(response)
         if(response.request.statusText === "OK"){
