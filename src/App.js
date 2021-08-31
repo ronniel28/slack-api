@@ -18,22 +18,19 @@ import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn]= useState(false);
-  const [isLoading, setIsLoading]= useState(false);
+  
 
   function toggleIsLoggedIn(){
     setIsLoggedIn(!isLoggedIn)
   }
 
-  function setLoading(){
-    setIsLoading(true);
-  }
+  
   return (
     <Router>
     
       <Switch>
         <Route exact path="/">
-          {isLoggedIn?(isLoading?(<MainPage toggleIsLoggedIn={toggleIsLoggedIn} />):(<div className="bg-red-900">LOADING........</div>)):(<LogInForm 
-          setLoading={setLoading}
+          {isLoggedIn?(<MainPage toggleIsLoggedIn={toggleIsLoggedIn} />):(<LogInForm 
           toggleIsLoggedIn={toggleIsLoggedIn} />)}
         </Route>
         <Route path="/register">

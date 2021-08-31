@@ -20,28 +20,17 @@ export default function LogInForm(props){
 
 const submitForm =async (data) =>{
 	
-	try{
-		await axios.post("http://206.189.91.54/api/v1/auth/sign_in",data)
-		.then((response)=>{
-		    console.log(response)
-		    if(response.request.statusText === "OK"){
-		        props.toggleIsLoggedIn();
-		    }
-			props.setLoading();
-		})
-	} catch(e){
-		console.log(e);
-	}
-    // axios.post("http://206.189.91.54/api/v1/auth/sign_in",data)
-    // .then((response)=>{
-    //     console.log(response)
-    //     if(response.request.statusText === "OK"){
-    //         props.toggleIsLoggedIn();
-    //     }
-    // })
-	// .catch((error)=>{
-	// 	console.log(error)
-	// })
+	
+    axios.post("https://206.189.91.54/api/v1/auth/sign_in",data)
+    .then((response)=>{
+        console.log(response)
+        if(response.request.statusText === "OK"){
+            props.toggleIsLoggedIn();
+        }
+    })
+	.catch((error)=>{
+		console.log(error)
+	})
 
 };
     return (
