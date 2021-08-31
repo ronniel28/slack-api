@@ -1,11 +1,13 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import SenderChatBubble from './SenderChatBubble';
 
-export default function ChatBox(){
+export default function ChatBox(props){
+  const headers=props.response.headers;
     const [messages, setMesseges]= useState([])
     const[data, setData]= useState({
-        reciever_id: "",
-        receiver_class:"",
+        receiver_id:267,
+        receiver_class:"User",
         body:""
     })
 
@@ -17,15 +19,26 @@ export default function ChatBox(){
         })
     }
 
-    function handleClick(){
-        setMesseges(prevValue =>{
-            return [...prevValue,data.body]
-        })
-        setData({
-            reciever_id: "",
-            receiver_class:"",
-            body:""
-        })
+    function handleClick(event){
+      event.preventDefault();
+      console.log(data)
+      axios.post("http://206.189.91.54/api/v1/messages",data, {
+        headers: headers
+      })
+      .then(response=>{
+        console.log(response)
+      })
+      .catch(error=>{
+        console.log(error)
+      })
+        // setMesseges(prevValue =>{
+        //     return [...prevValue,data.body]
+        // })
+        // setData({
+        //     reciever_id: "",
+        //     receiver_class:"",
+        //     body:""
+        // })
     }
     return(
         <div>
@@ -47,7 +60,7 @@ export default function ChatBox(){
             />
           </svg>
         </router-link>
-        <div className="my-3 text-green-100 font-bold text-lg tracking-wide">@rallipi</div>
+        <div className="my-3 text-green-100 font-bold text-lg tracking-wide">Avion School</div>
         {/* <!-- 3 dots --> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +69,7 @@ export default function ChatBox(){
         >
           <path
             className="text-green-100 fill-current"
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M12 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
           />
         </svg>

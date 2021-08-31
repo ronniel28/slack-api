@@ -29,7 +29,8 @@ export default function MainPage(props){
 
         </div>
         <div className="w-1/2 bg-cover bg-center" style={{backgroundImage: `url('https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80')`}}>
-            <ChatBox />
+            <ChatBox
+             response={props.response}/>
         </div>
     </div>
 </div>

@@ -17,20 +17,30 @@ import MainPage from './components/main/MainPage';
 import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn]= useState(true);
+  const [capturedResponse, setCapturedResponse] =useState({})
+  const [isLoggedIn, setIsLoggedIn]= useState(false);
   
 
   function toggleIsLoggedIn(){
     setIsLoggedIn(!isLoggedIn)
   }
 
-  
+  function passResponse(data){
+		setCapturedResponse(data)
+	}
+
   return (
     <Router>
     
       <Switch>
         <Route exact path="/">
-          {isLoggedIn?(<MainPage toggleIsLoggedIn={toggleIsLoggedIn} />):(<LogInForm 
+          {isLoggedIn?
+          (<MainPage 
+          response = {capturedResponse}
+          toggleIsLoggedIn={toggleIsLoggedIn} />)
+          :
+          (<LogInForm 
+          passResponse={passResponse}
           toggleIsLoggedIn={toggleIsLoggedIn} />)}
         </Route>
         <Route path="/register">
